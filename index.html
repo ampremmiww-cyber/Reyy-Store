@@ -1,36 +1,145 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Reyy Store - Top Up Game</title>
-  <style>
-    body{margin:0;font-family:Arial;background:#0f172a;color:#e5e7eb}
-    header{padding:20px;background:#020617;text-align:center}
-    h1{color:#22c55e}
-    .produk{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:20px}
-    .card{background:#020617;padding:20px;border-radius:10px}
-    button{width:100%;padding:10px;background:#22c55e;border:none;border-radius:8px;font-weight:bold}
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Reyy Store</h1>
-    <p>Top Up Game Aman & Cepat</p>
-  </header>
+<meta charset="UTF-8">
+<title>Reyy Store - Top Up Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="produk">
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0b1220;
+  color:white;
+}
+header{
+  background:#020617;
+  padding:20px;
+  text-align:center;
+}
+header h1{
+  color:#22c55e;
+  margin:0;
+}
+header p{
+  color:#cbd5e1;
+}
+.container{
+  padding:20px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card{
+  background:#020617;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 0 15px rgba(0,0,0,.4);
+}
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+}
+.card .content{
+  padding:15px;
+}
+.card h3{
+  margin:0 0 10px;
+}
+.card button{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#22c55e;
+  font-weight:bold;
+  cursor:pointer;
+}
+.card button:hover{
+  background:#16a34a;
+}
+.payment{
+  margin-top:30px;
+  background:#020617;
+  padding:20px;
+  border-radius:14px;
+}
+.payment h2{
+  margin-top:0;
+}
+footer{
+  margin-top:30px;
+  padding:15px;
+  text-align:center;
+  font-size:14px;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Reyy Store</h1>
+  <p>Top Up Game Aman • Cepat • Terpercaya</p>
+</header>
+
+<div class="container">
+  <h2>🔥 Pilih Game</h2>
+
+  <div class="grid">
+
     <div class="card">
-      <h3>Mobile Legends</h3>
-      <button>Top Up</button>
+      <img src="https://i.imgur.com/7Yz6F9M.png">
+      <div class="content">
+        <h3>Mobile Legends</h3>
+        <button onclick="order('Mobile Legends')">Top Up</button>
+      </div>
     </div>
+
     <div class="card">
-      <h3>Free Fire</h3>
-      <button>Top Up</button>
+      <img src="https://i.imgur.com/6Z7ZJYf.png">
+      <div class="content">
+        <h3>Free Fire</h3>
+        <button onclick="order('Free Fire')">Top Up</button>
+      </div>
     </div>
+
     <div class="card">
-      <h3>PUBG Mobile</h3>
-      <button>Top Up</button>
+      <img src="https://i.imgur.com/3Qk1ZpF.png">
+      <div class="content">
+        <h3>PUBG Mobile</h3>
+        <button onclick="order('PUBG Mobile')">Top Up</button>
+      </div>
     </div>
+
   </div>
+
+  <div class="payment">
+    <h2>💳 Metode Pembayaran</h2>
+    <p>✔ DANA</p>
+    <p>✔ QRIS</p>
+    <p>✔ GOPAY</p>
+    <p>✔ Transfer Bank</p>
+  </div>
+</div>
+
+<footer>
+  © 2026 Reyy Store • Order via WhatsApp
+</footer>
+
+<script>
+function order(game){
+  const wa = "6282246863527"; // GANTI NO WA KAMU
+  const text = `Halo Reyy Store, saya mau top up ${game}`;
+  window.open(`https://wa.me/${wa}?text=${encodeURIComponent(text)}`);
+}
+</script>
+
 </body>
 </html>
+
+
